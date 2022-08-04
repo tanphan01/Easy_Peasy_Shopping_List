@@ -2,12 +2,12 @@
     <string name="app_name">My First Shopping List</string>
     <string name="title_activity_main2">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">Easy Peasy Shopping List</string>
+    <string name="second_fragment_label">My shopping list</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Easy Peasy Shopping List</string>
+    <string name="hello_first_fragment">Welcome to a new way to shop !</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="view_shopping_lists">View shopping lists</string>
     <string name="add_a_new_list">Add a new list</string>

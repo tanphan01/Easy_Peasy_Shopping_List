@@ -33,15 +33,19 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
+        binding.fab.setOnClickListener { view ->
+            Snackbar.make(view, "You've created a new list", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Romain is the King", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+
+//        binding.btnFirst.setOnClickListener {
+//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+//        }
+
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
