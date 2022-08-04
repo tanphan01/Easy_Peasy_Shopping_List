@@ -1,10 +1,13 @@
 package be.bf.android.myfirstshoppinglist
 
+import android.app.ProgressDialog.show
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import be.bf.android.myfirstshoppinglist.databinding.FragmentFirstBinding
 import com.google.android.material.snackbar.Snackbar
@@ -34,11 +37,18 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "You've created a new list", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+
+            val t:Toast = Toast.makeText(context, "Explosion 💥", Toast.LENGTH_SHORT)
+                t.setGravity(Gravity.TOP, Gravity.CENTER, 0)
+                t.show();
+
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 
+//            Snackbar.make(view, "You've created a new list", Snackbar.LENGTH_SHORT)
+//                .setAction("Annuler", View.OnClickListener {
+//
+//                }).show()
 
 //        binding.btnFirst.setOnClickListener {
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)

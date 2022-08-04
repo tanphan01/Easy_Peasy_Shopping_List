@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My First Shopping List</string>
+    <string name="app_name">Easy Peasy Shopping List</string>
     <string name="title_activity_main2">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Easy Peasy Shopping List</string>
