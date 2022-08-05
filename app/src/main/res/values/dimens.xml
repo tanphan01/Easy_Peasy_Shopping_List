@@ -1,3 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="cat_margin_ext">20dp</dimen>
+    <dimen name="cat_margin">10dp</dimen>
+    <dimen name="cat_padding">30dp</dimen>
 </resources>

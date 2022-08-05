@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import be.bf.android.myfirstshoppinglist.databinding.FragmentSecondBinding
 
@@ -32,9 +33,17 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+//        binding.btnBack.setOnClickListener {
+//            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+//        }
+
+        binding.cat1.setOnClickListener {
+            Toast.makeText(context, "Cat", Toast.LENGTH_SHORT).show()
         }
+        binding.cat4.setOnClickListener {
+            Toast.makeText(context, "Neige", Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     override fun onDestroyView() {

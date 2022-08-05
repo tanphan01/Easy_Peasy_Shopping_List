@@ -10,18 +10,145 @@
         android:id="@+id/textview_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btn_second"
+        android:layout_marginTop="144dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gridLayout" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_Back"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="81dp"-->
+<!--        android:text="@string/Back"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/btn_create"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_create"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:text="@string/Create"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Back"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btn_Back"-->
+<!--        app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <TextView
+        android:id="@+id/tv_Categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Categories"
+        android:textSize="50dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/previous"
+    <LinearLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:layout_constraintTop_toBottomOf="@id/tv_Categories"
+        android:layout_margin="@dimen/cat_margin_ext"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/cat1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:backgroundTint="#0f0"
+                android:padding="@dimen/cat_padding"
+                android:layout_marginBottom="@dimen/cat_margin"
+                android:src="@drawable/cat_animals2"/>
+
+            <ImageButton
+                android:id="@+id/cat2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:backgroundTint="#f00"
+                android:padding="@dimen/cat_padding"
+                android:layout_marginBottom="@dimen/cat_margin"
+                android:src="@drawable/cat_baby"/>
+
+            <ImageButton
+                android:id="@+id/cat3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:backgroundTint="#00f"
+                android:padding="@dimen/cat_padding"
+                android:src="@drawable/cat_medoc"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/cat_margin"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/cat4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:padding="@dimen/cat_padding"
+                android:layout_marginBottom="@dimen/cat_margin"
+                android:src="@drawable/cat_frozen"/>
+
+            <ImageButton
+                android:id="@+id/cat5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:padding="@dimen/cat_padding"
+                android:layout_marginBottom="@dimen/cat_margin"
+                android:src="@drawable/cat_cosmetiques"/>
+
+            <ImageButton
+                android:id="@+id/cat6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:padding="@dimen/cat_padding"
+                android:src="@drawable/cat_household"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
