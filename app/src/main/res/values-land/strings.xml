@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Cancel">Cancel</string>
+    <string name="Create">Create</string>
+    <string name="List_editor">list_editor</string>
+    <string name="Name">Name:</string>
+    <string name="Back">Back</string>
+    <string name="Categories">Categories</string>
+</resources>
