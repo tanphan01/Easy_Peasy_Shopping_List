@@ -69,36 +69,33 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/cat1"
+                android:id="@+id/cat"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/cat_margin"
                 android:layout_weight="1"
+                android:padding="@dimen/cat_padding"
                 android:scaleType="centerCrop"
-                android:backgroundTint="#0f0"
-                android:padding="@dimen/cat_padding"
-                android:layout_marginBottom="@dimen/cat_margin"
-                android:src="@drawable/cat_animals2"/>
+                android:src="@drawable/cat_animals2" />
 
             <ImageButton
-                android:id="@+id/cat2"
+                android:id="@+id/baby"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/cat_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/cat_padding"
+                android:scaleType="fitXY"
+                android:src="@drawable/cat_baby" />
+
+            <ImageButton
+                android:id="@+id/medoc"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:scaleType="fitXY"
-                android:backgroundTint="#f00"
                 android:padding="@dimen/cat_padding"
-                android:layout_marginBottom="@dimen/cat_margin"
-                android:src="@drawable/cat_baby"/>
-
-            <ImageButton
-                android:id="@+id/cat3"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
                 android:scaleType="fitXY"
-                android:backgroundTint="#00f"
-                android:padding="@dimen/cat_padding"
-                android:src="@drawable/cat_medoc"/>
+                android:src="@drawable/cat_medoc" />
 
         </LinearLayout>
 
@@ -114,7 +111,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/cat4"
+                android:id="@+id/frozen"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -124,7 +121,7 @@
                 android:src="@drawable/cat_frozen"/>
 
             <ImageButton
-                android:id="@+id/cat5"
+                android:id="@+id/cosmetique"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -134,7 +131,7 @@
                 android:src="@drawable/cat_cosmetiques"/>
 
             <ImageButton
-                android:id="@+id/cat6"
+                android:id="@+id/household"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
