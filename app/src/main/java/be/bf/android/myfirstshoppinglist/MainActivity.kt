@@ -1,7 +1,6 @@
 package be.bf.android.myfirstshoppinglist
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -25,9 +24,6 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-
-        Log.d("TAN", "Start App !")
     }
 
     override fun onSupportNavigateUp(): Boolean {

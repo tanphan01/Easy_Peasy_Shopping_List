@@ -38,8 +38,7 @@ class FirstFragment : Fragment() {
 
         binding.fab.setOnClickListener { view ->
 
-            val t:Toast = Toast.makeText(context, "Explosion 💥", Toast.LENGTH_SHORT)
-                t.setGravity(Gravity.TOP, Gravity.CENTER, 0)
+            val t:Toast = Toast.makeText(context, "Please choose a category", Toast.LENGTH_SHORT)
                 t.show();
 
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
