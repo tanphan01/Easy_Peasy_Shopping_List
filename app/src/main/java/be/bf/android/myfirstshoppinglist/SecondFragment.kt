@@ -37,11 +37,23 @@ class SecondFragment : Fragment() {
 //            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 //        }
 
-        binding.cat1.setOnClickListener {
-            Toast.makeText(context, "Cat", Toast.LENGTH_SHORT).show()
+        binding.cat.setOnClickListener {
+            Toast.makeText(context, "Animals", Toast.LENGTH_SHORT).show()
         }
-        binding.cat4.setOnClickListener {
-            Toast.makeText(context, "Neige", Toast.LENGTH_SHORT).show()
+        binding.frozen.setOnClickListener {
+            Toast.makeText(context, "Frozen", Toast.LENGTH_SHORT).show()
+        }
+        binding.baby.setOnClickListener {
+            Toast.makeText(context, "Baby", Toast.LENGTH_SHORT).show()
+        }
+        binding.cosmetique.setOnClickListener {
+            Toast.makeText(context, "Cosmetique", Toast.LENGTH_SHORT).show()
+        }
+        binding.medoc.setOnClickListener {
+            Toast.makeText(context, "Medoc", Toast.LENGTH_SHORT).show()
+        }
+        binding.household.setOnClickListener {
+            Toast.makeText(context, "Household", Toast.LENGTH_SHORT).show()
         }
 
     }

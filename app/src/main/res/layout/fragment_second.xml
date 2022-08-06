@@ -138,7 +138,6 @@
                 android:scaleType="fitXY"
                 android:padding="@dimen/cat_padding"
                 android:src="@drawable/cat_household"/>
-
         </LinearLayout>
 
 
