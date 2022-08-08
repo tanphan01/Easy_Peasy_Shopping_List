@@ -33,12 +33,16 @@ class SecondFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.cat.setOnClickListener(this)
-        binding.cosmetique.setOnClickListener(this)
+        binding.pets.setOnClickListener(this)
+        binding.skincare.setOnClickListener(this)
         binding.baby.setOnClickListener(this)
         binding.frozen.setOnClickListener(this)
         binding.household.setOnClickListener(this)
-        binding.medoc.setOnClickListener(this)
+        binding.healthcare.setOnClickListener(this)
+        binding.bread.setOnClickListener(this)
+        binding.condiments.setOnClickListener(this)
+        binding.drinks.setOnClickListener(this)
+        binding.milk.setOnClickListener(this)
 
     }
 

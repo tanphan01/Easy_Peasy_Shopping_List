@@ -40,20 +40,20 @@
         android:weightSum="2">
 
         <LinearLayout
-            android:weightSum="3"
+            android:weightSum="5"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/cat"
+                android:id="@+id/pets"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginBottom="@dimen/cat_margin"
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
-                android:scaleType="centerCrop"
+                android:scaleType=""
                 android:src="@drawable/cat_animals2" />
 
             <ImageButton
@@ -63,17 +63,35 @@
                 android:layout_marginBottom="@dimen/cat_margin"
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
-                android:scaleType="fitXY"
+                android:scaleType=""
                 android:src="@drawable/cat_baby" />
 
             <ImageButton
-                android:id="@+id/medoc"
+                android:id="@+id/healthcare"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
-                android:scaleType="fitXY"
-                android:src="@drawable/cat_healthcare" />
+                android:scaleType=""
+                android:src="@drawable/cat_healthcare"/>
+
+            <ImageButton
+                android:id="@+id/bread"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="@dimen/cat_padding"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cat_bread" />
+
+            <ImageButton
+                android:id="@+id/drinks"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType=""
+                android:padding="@dimen/cat_padding"
+                android:src="@drawable/cat_drinks"/>
 
         </LinearLayout>
 
@@ -82,7 +100,7 @@
             android:layout_height="0dp"/>
 
         <LinearLayout
-            android:weightSum="3"
+            android:weightSum="5"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -95,15 +113,15 @@
                 android:layout_marginBottom="@dimen/cat_margin"
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
-                android:scaleType="centerCrop"
+                android:scaleType=""
                 android:src="@drawable/cat_frozen" />
 
             <ImageButton
-                android:id="@+id/cosmetique"
+                android:id="@+id/skincare"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:scaleType="fitXY"
+                android:scaleType=""
                 android:padding="@dimen/cat_padding"
                 android:layout_marginBottom="@dimen/cat_margin"
                 android:src="@drawable/cat_skincare"/>
@@ -113,9 +131,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:scaleType="fitXY"
+                android:scaleType=""
                 android:padding="@dimen/cat_padding"
                 android:src="@drawable/cat_household"/>
+
+            <ImageButton
+                android:id="@+id/milk"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType=""
+                android:padding="@dimen/cat_padding"
+                android:src="@drawable/cat_milk"/>
+
+            <ImageButton
+                android:id="@+id/condiments"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/cat_padding"
+                android:src="@drawable/cat_condiments"/>
         </LinearLayout>
 
 
