@@ -12,7 +12,7 @@ import be.bf.android.myfirstshoppinglist.databinding.FragmentSecondBinding
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class SecondFragment : Fragment() {
+class SecondFragment : Fragment(), View.OnClickListener {
 
     private var _binding: FragmentSecondBinding? = null
 
@@ -33,30 +33,27 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.cat.setOnClickListener(this)
+        binding.cosmetique.setOnClickListener(this)
+        binding.baby.setOnClickListener(this)
+        binding.frozen.setOnClickListener(this)
+        binding.household.setOnClickListener(this)
+        binding.medoc.setOnClickListener(this)
 
-        binding.cat.setOnClickListener {
-            Toast.makeText(context, "Animals", Toast.LENGTH_SHORT).show()
-        }
-        binding.frozen.setOnClickListener {
-            Toast.makeText(context, "Frozen", Toast.LENGTH_SHORT).show()
-        }
-        binding.baby.setOnClickListener {
-            Toast.makeText(context, "Baby", Toast.LENGTH_SHORT).show()
-        }
-        binding.cosmetique.setOnClickListener {
-            Toast.makeText(context, "Skincare", Toast.LENGTH_SHORT).show()
-        }
-        binding.medoc.setOnClickListener {
-            Toast.makeText(context, "Healthcare", Toast.LENGTH_SHORT).show()
-        }
-        binding.household.setOnClickListener {
-            Toast.makeText(context, "Household", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
-        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+    override fun onClick(p0: View?) {
+        findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment,)
+    }
+
+//    override fun onClick(v: View?) {
+//
+//        Toast.makeText(context, "Target : " + v?.id, Toast.LENGTH_SHORT).show()
+//        findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment,)
+//    }
 }
