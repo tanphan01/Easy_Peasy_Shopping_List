@@ -36,22 +36,19 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.fab.setOnClickListener { view ->
+        binding.btnViewsShoplist.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_FourFragment)
+        }
+
+        binding.fab.setOnClickListener { view: View ->
 
             val t:Toast = Toast.makeText(context, "Please choose a category", Toast.LENGTH_SHORT)
-                t.show();
+            t.show();
 
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 
-//            Snackbar.make(view, "You've created a new list", Snackbar.LENGTH_SHORT)
-//                .setAction("Annuler", View.OnClickListener {
-//
-//                }).show()
-
-
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
