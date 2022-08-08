@@ -41,7 +41,6 @@ class FourFragment : Fragment() {
             findNavController().navigate(R.id.action_FourFragment_to_ThirdFragment)
         }
 
-
     }
 
     override fun onDestroyView() {
