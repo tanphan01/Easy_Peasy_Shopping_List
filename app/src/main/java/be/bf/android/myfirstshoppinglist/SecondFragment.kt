@@ -47,10 +47,10 @@ class SecondFragment : Fragment() {
             Toast.makeText(context, "Baby", Toast.LENGTH_SHORT).show()
         }
         binding.cosmetique.setOnClickListener {
-            Toast.makeText(context, "Cosmetique", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Skincare", Toast.LENGTH_SHORT).show()
         }
         binding.medoc.setOnClickListener {
-            Toast.makeText(context, "Medoc", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Healthcare", Toast.LENGTH_SHORT).show()
         }
         binding.household.setOnClickListener {
             Toast.makeText(context, "Household", Toast.LENGTH_SHORT).show()

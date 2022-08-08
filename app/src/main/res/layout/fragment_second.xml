@@ -95,7 +95,7 @@
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
                 android:scaleType="fitXY"
-                android:src="@drawable/cat_medoc" />
+                android:src="@drawable/cat_healthcare" />
 
         </LinearLayout>
 
@@ -114,11 +114,11 @@
                 android:id="@+id/frozen"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scaleType="fitXY"
-                android:padding="@dimen/cat_padding"
                 android:layout_marginBottom="@dimen/cat_margin"
-                android:src="@drawable/cat_frozen"/>
+                android:layout_weight="1"
+                android:padding="@dimen/cat_padding"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cat_frozen" />
 
             <ImageButton
                 android:id="@+id/cosmetique"
@@ -128,7 +128,7 @@
                 android:scaleType="fitXY"
                 android:padding="@dimen/cat_padding"
                 android:layout_marginBottom="@dimen/cat_margin"
-                android:src="@drawable/cat_cosmetiques"/>
+                android:src="@drawable/cat_skincare"/>
 
             <ImageButton
                 android:id="@+id/household"
