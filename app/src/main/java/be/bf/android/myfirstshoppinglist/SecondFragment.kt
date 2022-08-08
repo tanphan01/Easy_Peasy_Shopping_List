@@ -33,9 +33,6 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        binding.btnBack.setOnClickListener {
-//            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-//        }
 
         binding.cat.setOnClickListener {
             Toast.makeText(context, "Animals", Toast.LENGTH_SHORT).show()
@@ -54,8 +51,8 @@ class SecondFragment : Fragment() {
         }
         binding.household.setOnClickListener {
             Toast.makeText(context, "Household", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
         }
-
     }
 
     override fun onDestroyView() {

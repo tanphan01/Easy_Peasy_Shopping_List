@@ -49,9 +49,6 @@ class FirstFragment : Fragment() {
 //
 //                }).show()
 
-//        binding.btnFirst.setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
 
     }
 
