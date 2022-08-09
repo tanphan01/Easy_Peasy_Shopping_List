@@ -4,8 +4,6 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Easy Peasy Shopping List</string>
     <string name="second_fragment_label">My shopping list</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Welcome to a new way to shop !</string>
     <string name="hello_second_fragment"></string>
@@ -22,6 +20,8 @@
     <string name="Categories">Categories</string>
     <string name="Shopping_List">Shopping List</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="txt">Txt</string>
+    <string name="Lbl_editor">List Editor</string>
+    <string name="et_product">Product</string>
+    <string name="product">Write a product</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
