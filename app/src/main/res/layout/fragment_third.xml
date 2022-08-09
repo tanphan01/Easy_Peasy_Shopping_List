@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginBottom="11dp"
         android:text="@string/Lbl_editor"
         android:textSize="50sp"
         android:textStyle="bold"
@@ -45,29 +45,74 @@
 
     <TextView
         android:id="@+id/tv_name"
-        android:layout_width="89dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="13dp"
         android:text="@string/Name"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_product"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/et_product4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_create"
+        app:layout_constraintStart_toStartOf="@+id/et_product2"
         app:layout_constraintTop_toBottomOf="@+id/tv_editor_list" />
 
     <EditText
         android:id="@+id/et_product"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="378dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="241dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/product"
         app:layout_constraintBottom_toTopOf="@+id/btn_Back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_product3" />
+
+    <EditText
+        android:id="@+id/et_product2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/product"
+        app:layout_constraintBottom_toTopOf="@+id/et_product3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_product4" />
+
+    <EditText
+        android:id="@+id/et_product3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/product"
+        app:layout_constraintBottom_toTopOf="@+id/et_product"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_product2" />
+
+    <EditText
+        android:id="@+id/et_product4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/product"
+        app:layout_constraintBottom_toTopOf="@+id/et_product2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
 
