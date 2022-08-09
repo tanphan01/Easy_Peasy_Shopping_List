@@ -53,7 +53,7 @@
                 android:layout_marginBottom="@dimen/cat_margin"
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
-                android:scaleType=""
+                android:scaleType="centerInside"
                 android:src="@drawable/cat_animals2" />
 
             <ImageButton
@@ -63,7 +63,7 @@
                 android:layout_marginBottom="@dimen/cat_margin"
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
-                android:scaleType=""
+                android:scaleType="centerInside"
                 android:src="@drawable/cat_baby" />
 
             <ImageButton
@@ -72,7 +72,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
-                android:scaleType=""
+                android:scaleType="fitCenter"
                 android:src="@drawable/cat_healthcare"/>
 
             <ImageButton
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:scaleType=""
+                android:scaleType="centerInside"
                 android:padding="@dimen/cat_padding"
                 android:src="@drawable/cat_drinks"/>
 
@@ -113,7 +113,7 @@
                 android:layout_marginBottom="@dimen/cat_margin"
                 android:layout_weight="1"
                 android:padding="@dimen/cat_padding"
-                android:scaleType=""
+                android:scaleType="centerInside"
                 android:src="@drawable/cat_frozen" />
 
             <ImageButton
@@ -121,7 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:scaleType=""
+                android:scaleType="centerInside"
                 android:padding="@dimen/cat_padding"
                 android:layout_marginBottom="@dimen/cat_margin"
                 android:src="@drawable/cat_skincare"/>
@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:scaleType=""
+                android:scaleType="centerInside"
                 android:padding="@dimen/cat_padding"
                 android:src="@drawable/cat_household"/>
 
@@ -140,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:scaleType=""
+                android:scaleType="fitCenter"
                 android:padding="@dimen/cat_padding"
                 android:src="@drawable/cat_milk"/>
 
