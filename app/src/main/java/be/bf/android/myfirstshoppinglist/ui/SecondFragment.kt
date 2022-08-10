@@ -46,8 +46,6 @@ class SecondFragment : Fragment(), View.OnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
         }
 
-
-
 //        binding.pets.setOnClickListener(this)
 //        val toast = Toast.makeText(context, "Pets", Toast.LENGTH_SHORT)
 //        toast.show()

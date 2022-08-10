@@ -24,7 +24,7 @@ class UpdateListAdapter(private val data : List<Product>) : RecyclerView.Adapter
             holder.etName.setText(data[position].name)
         }
         else {
-            holder.etName.hint = "Nom du produit"
+            holder.etName.hint = "Product's Name"
 
 //            holder.btnAdd
 //            notifyItemInserted(position)
