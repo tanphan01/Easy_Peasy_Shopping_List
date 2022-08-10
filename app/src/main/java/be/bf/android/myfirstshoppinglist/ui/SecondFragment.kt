@@ -42,8 +42,7 @@ class SecondFragment : Fragment(), View.OnClickListener {
 
         binding.rvSecondFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.rvSecondFragment.layoutManager = GridLayoutManager(context, 2)
-//        binding.rvSecondFragment.adapter = CategoryAdapter() {
-//            Toast.makeText(context, it.txt, Toast.LENGTH_LONG).show()
+        binding.rvSecondFragment.adapter = CategoryAdapter() {
             findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
         }
 
