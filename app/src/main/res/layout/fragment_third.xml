@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdFragment">
+    android:padding="16dp"
+    tools:context=".ui.ThirdFragment">
 
     <Button
         android:id="@+id/btn_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="64dp"
         android:text="@string/Create"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Back"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_Back"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -22,98 +24,42 @@
         android:id="@+id/btn_Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="81dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="64dp"
         android:text="@string/Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_create"
-        app:layout_constraintTop_toBottomOf="@+id/et_product" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_create" />
 
     <TextView
         android:id="@+id/tv_editor_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginTop="16dp"
         android:text="@string/Lbl_editor"
         android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="13dp"
-        android:text="@string/Name"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_product4"
-        app:layout_constraintEnd_toStartOf="@+id/btn_create"
-        app:layout_constraintStart_toStartOf="@+id/et_product2"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_editor_list" />
 
-    <EditText
-        android:id="@+id/et_product"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_third_fragment"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="241dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/product"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Back"
+        android:layout_height="400dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_product3" />
-
-    <EditText
-        android:id="@+id/et_product2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/product"
-        app:layout_constraintBottom_toTopOf="@+id/et_product3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_product4" />
-
-    <EditText
-        android:id="@+id/et_product3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/product"
-        app:layout_constraintBottom_toTopOf="@+id/et_product"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_product2" />
-
-    <EditText
-        android:id="@+id/et_product4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/product"
-        app:layout_constraintBottom_toTopOf="@+id/et_product2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

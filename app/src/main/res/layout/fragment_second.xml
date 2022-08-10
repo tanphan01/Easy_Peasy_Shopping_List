@@ -4,16 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
-
-    <TextView
-        android:id="@+id/textview_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gridLayout" />
+    tools:context=".ui.SecondFragment">
 
     <TextView
         android:id="@+id/tv_Categories"
@@ -27,138 +18,147 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_second_fragment"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Categories"
-        android:layout_margin="@dimen/cat_margin_ext"
-        android:weightSum="2">
+        app:layout_constraintTop_toBottomOf="@+id/tv_Categories" />
 
-        <LinearLayout
-            android:weightSum="5"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/gridLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_Categories"-->
+<!--        android:layout_margin="@dimen/cat_margin_ext"-->
+<!--        android:weightSum="2">-->
 
-            <ImageButton
-                android:id="@+id/pets"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/cat_margin"
-                android:layout_weight="1"
-                android:padding="@dimen/cat_padding"
-                android:scaleType="centerInside"
-                android:src="@drawable/cat_animals2" />
+<!--        <LinearLayout-->
+<!--            android:weightSum="5"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
 
-            <ImageButton
-                android:id="@+id/baby"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/cat_margin"
-                android:layout_weight="1"
-                android:padding="@dimen/cat_padding"
-                android:scaleType="centerInside"
-                android:src="@drawable/cat_baby" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/pets"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginBottom="@dimen/cat_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@drawable/cat_animals2" />-->
 
-            <ImageButton
-                android:id="@+id/healthcare"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:padding="@dimen/cat_padding"
-                android:scaleType="fitCenter"
-                android:src="@drawable/cat_healthcare"/>
+<!--            <ImageButton-->
+<!--                android:id="@+id/baby"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginBottom="@dimen/cat_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@drawable/cat_baby" />-->
 
-            <ImageButton
-                android:id="@+id/bread"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:padding="@dimen/cat_padding"
-                android:scaleType="centerCrop"
-                android:src="@drawable/cat_bread" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/healthcare"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/cat_healthcare"/>-->
 
-            <ImageButton
-                android:id="@+id/drinks"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scaleType="centerInside"
-                android:padding="@dimen/cat_padding"
-                android:src="@drawable/cat_drinks"/>
+<!--            <ImageButton-->
+<!--                android:id="@+id/bread"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/cat_bread" />-->
 
-        </LinearLayout>
+<!--            <ImageButton-->
+<!--                android:id="@+id/drinks"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:src="@drawable/cat_drinks"/>-->
 
-        <View
-            android:layout_width="@dimen/cat_margin"
-            android:layout_height="0dp"/>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:weightSum="5"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+<!--        <View-->
+<!--            android:layout_width="@dimen/cat_margin"-->
+<!--            android:layout_height="0dp"/>-->
 
-            <ImageButton
-                android:id="@+id/frozen"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/cat_margin"
-                android:layout_weight="1"
-                android:padding="@dimen/cat_padding"
-                android:scaleType="centerInside"
-                android:src="@drawable/cat_frozen" />
+<!--        <LinearLayout-->
+<!--            android:weightSum="5"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
 
-            <ImageButton
-                android:id="@+id/skincare"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scaleType="centerInside"
-                android:padding="@dimen/cat_padding"
-                android:layout_marginBottom="@dimen/cat_margin"
-                android:src="@drawable/cat_skincare"/>
+<!--            <ImageButton-->
+<!--                android:id="@+id/frozen"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginBottom="@dimen/cat_margin"-->
+<!--                android:layout_weight="1"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@drawable/cat_frozen" />-->
 
-            <ImageButton
-                android:id="@+id/household"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scaleType="centerInside"
-                android:padding="@dimen/cat_padding"
-                android:src="@drawable/cat_household"/>
+<!--            <ImageButton-->
+<!--                android:id="@+id/skincare"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:layout_marginBottom="@dimen/cat_margin"-->
+<!--                android:src="@drawable/cat_skincare"/>-->
 
-            <ImageButton
-                android:id="@+id/milk"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                android:padding="@dimen/cat_padding"
-                android:src="@drawable/cat_milk"/>
+<!--            <ImageButton-->
+<!--                android:id="@+id/household"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:src="@drawable/cat_household"/>-->
 
-            <ImageButton
-                android:id="@+id/condiments"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                android:padding="@dimen/cat_padding"
-                android:src="@drawable/cat_condiments"/>
-        </LinearLayout>
+<!--            <ImageButton-->
+<!--                android:id="@+id/milk"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:src="@drawable/cat_milk"/>-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/condiments"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:padding="@dimen/cat_padding"-->
+<!--                android:src="@drawable/cat_condiments"/>-->
+<!--        </LinearLayout>-->
 
 
 
 
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
