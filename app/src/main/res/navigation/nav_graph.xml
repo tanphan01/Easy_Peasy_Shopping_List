@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="be.bf.android.myfirstshoppinglist.FirstFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="be.bf.android.myfirstshoppinglist.SecondFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/ThirdFragment"
-        android:name="be.bf.android.myfirstshoppinglist.ThirdFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.ThirdFragment"
         android:label="@string/hello_third_fragment"
         tools:layout="@layout/fragment_third">
 
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/FourFragment"
-        android:name="be.bf.android.myfirstshoppinglist.FourFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.FourFragment"
         android:label="@string/hello_four_fragment"
         tools:layout="@layout/fragment_four">
 
