@@ -40,10 +40,6 @@ class FirstFragment : Fragment() {
         }
 
         binding.fab.setOnClickListener { view: View ->
-
-            val t:Toast = Toast.makeText(context, "Please choose a category", Toast.LENGTH_SHORT)
-            t.show();
-
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 
