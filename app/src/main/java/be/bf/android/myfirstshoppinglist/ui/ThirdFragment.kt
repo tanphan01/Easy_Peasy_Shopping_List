@@ -40,14 +40,14 @@ class ThirdFragment : Fragment() {
         binding.rvThirdFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.rvThirdFragment.adapter = UpdateListAdapter(listOf())
 
-        binding.btnBack.setOnClickListener {
-            findNavController().navigate(R.id.action_ThirdFragment_to_SecondFragment)
-        }
 
         binding.btnCreate.setOnClickListener {
             findNavController().navigate(R.id.action_ThirdFragment_to_SecondFragment)
         }
 
+        binding.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_ThirdFragment_to_SecondFragment)
+        }
     }
 
     override fun onDestroyView() {
