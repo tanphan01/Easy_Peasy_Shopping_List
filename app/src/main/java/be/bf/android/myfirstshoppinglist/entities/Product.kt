@@ -10,6 +10,6 @@ data class Product constructor(
     var id : Long? = null,
     val name : String,
     val quantity : Int = 1,
-    val category : CategoryProductEnum = CategoryProductEnum.HOUSEHOLD,
+    val category : CategoryProductEnum = CategoryProductEnum.PETS,
     var listProductId : Long? = null
 ) {}
