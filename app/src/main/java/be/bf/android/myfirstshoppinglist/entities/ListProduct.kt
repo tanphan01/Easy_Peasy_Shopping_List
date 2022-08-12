@@ -1,9 +1,13 @@
 package be.bf.android.myfirstshoppinglist.entities
 
-import android.nfc.Tag
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-data class ListProduct(
+@Entity(tableName = "list_products")
+data class ListProduct constructor(
+    @PrimaryKey(autoGenerate = true)
+    val id : Long? = null,
     val name : String,
-    val categories_list : String,
-    val tag: Tag,
+    val categoriesList : String,
+
 )

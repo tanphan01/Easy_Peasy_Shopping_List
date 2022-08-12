@@ -1,5 +1,6 @@
 package be.bf.android.myfirstshoppinglist.adapters
 
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +11,13 @@ import be.bf.android.myfirstshoppinglist.R
 import be.bf.android.myfirstshoppinglist.entities.Product
 import be.bf.android.myfirstshoppinglist.enums.CategoryProductEnum
 
-class UpdateListAdapter(private val data : MutableList<Product>) : RecyclerView.Adapter<UpdateListAdapter.UpdateListViewHolder>() {
+class UpdateListAdapter(private val data : MutableList<Product>, private val onItemClick : (btn: ClickType, produit: Product) -> Unit) : RecyclerView.Adapter<UpdateListAdapter.UpdateListViewHolder>() {
 
-    class UpdateListViewHolder(val view : View) : RecyclerView.ViewHolder(view) {
+    enum class ClickType {
+        PLUS, MINUS
+    }
+
+    class UpdateListViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val etName : EditText = view.findViewById(R.id.et_name_product_item)
         val btn_plus : Button = view.findViewById(R.id.btn_plus)
         val btn_minus : Button = view.findViewById(R.id.btn_minus)
@@ -26,21 +31,23 @@ class UpdateListAdapter(private val data : MutableList<Product>) : RecyclerView.
 
     override fun onBindViewHolder(holder: UpdateListViewHolder, position: Int) {
         if (position < data.size) {
+            holder.btn_plus.visibility = View.INVISIBLE
+            holder.btn_minus.visibility = View.VISIBLE
             holder.etName.setText(data[position].name)
+            holder.btn_minus.setOnClickListener {
+                val prout = Product(name = holder.etName.text.toString())
+                onItemClick(ClickType.MINUS, prout)
+            }
         }
         else {
+            holder.btn_plus.visibility = View.VISIBLE
+            holder.btn_minus.visibility = View.INVISIBLE
             holder.etName.hint = "Product's Name"
 
             holder.btn_plus.setOnClickListener {
-                data.add( Product(holder.etName.text.toString(),1,CategoryProductEnum.PETS))
-                notifyItemInserted(data.size-1)
+                val produit = Product(name = holder.etName.text.toString())
+                onItemClick(ClickType.PLUS, produit)
             }
-
-            holder.btn_minus.setOnClickListener {
-                data.remove(Product(holder.etName.text.toString(),1,CategoryProductEnum.FROZEN_FOODS))
-                notifyItemRemoved(data.size-1)
-            }
-
         }
     }
 
