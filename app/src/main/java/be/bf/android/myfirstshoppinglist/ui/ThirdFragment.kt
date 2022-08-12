@@ -73,6 +73,11 @@ class ThirdFragment : Fragment() {
                 databaseProduct.create(it)
             }
 
+            data.forEach{
+                it.listProductId = idListProduct
+                databaseProduct.deleteAll()
+            }
+
             Log.d("List product :", databaseListProduct.findAll().toString())
             Log.d("Products", databaseProduct.findAll().toString())
 
@@ -85,18 +90,18 @@ class ThirdFragment : Fragment() {
 
     }
 
-    private fun onItemClick(clickType: UpdateListAdapter.ClickType, produit: Product) {
+    private fun onItemClick(clickType: UpdateListAdapter.ClickType, prout: Product) {
         when(clickType) {
             UpdateListAdapter.ClickType.MINUS -> {
-                data.remove(produit)
-                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
-                    onItemClick(clickType, produit)
+                data.remove(prout)
+                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, prout ->
+                    onItemClick(clickType, prout)
                 }
             }
             UpdateListAdapter.ClickType.PLUS -> {
-                data.add(produit)
-                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
-                    onItemClick(clickType, produit)
+                data.add(prout)
+                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, prout ->
+                    onItemClick(clickType, prout)
                 }
             }
         }
