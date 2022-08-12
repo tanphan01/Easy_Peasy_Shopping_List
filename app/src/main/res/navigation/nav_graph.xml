@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_ThirdFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_ThirdFragment_to_FourFragment"
+            app:destination="@id/FourFragment" />
     </fragment>
     <fragment
         android:id="@+id/FourFragment"

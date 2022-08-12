@@ -27,5 +27,8 @@
     <string name="logo">Logo</string>
     <string name="textview">TextView</string>
     <string name="desc_img_add_list">desc_img_add_list</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="Clear">Clear</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

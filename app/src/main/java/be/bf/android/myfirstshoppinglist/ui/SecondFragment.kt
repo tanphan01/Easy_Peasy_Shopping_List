@@ -29,7 +29,6 @@ class SecondFragment : Fragment(), View.OnClickListener {
     ): View? {
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
-
         return binding.root
 
     }

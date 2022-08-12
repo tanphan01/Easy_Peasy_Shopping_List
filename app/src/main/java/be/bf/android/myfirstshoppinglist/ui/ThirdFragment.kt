@@ -38,16 +38,17 @@ class ThirdFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.rvThirdFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        binding.rvThirdFragment.adapter = UpdateListAdapter(listOf())
+        binding.rvThirdFragment.adapter = UpdateListAdapter(mutableListOf())
 
 
         binding.btnCreate.setOnClickListener {
-            findNavController().navigate(R.id.action_ThirdFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_ThirdFragment_to_FourFragment)
         }
 
         binding.btnBack.setOnClickListener {
             findNavController().navigate(R.id.action_ThirdFragment_to_SecondFragment)
         }
+
     }
 
     override fun onDestroyView() {
