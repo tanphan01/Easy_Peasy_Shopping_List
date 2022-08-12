@@ -56,14 +56,14 @@ class ThirdFragment : Fragment() {
         databaseListProduct = DbHelper.instance(requireContext()).listProducts()
 
         binding.rvThirdFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
-            onItemClick(clickType, produit)
+        binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, prout ->
+            onItemClick(clickType, prout)
         }
 
         binding.btnCreate.setOnClickListener {
 
             val idListProduct = databaseListProduct.create(
-                ListProduct(0,
+                ListProduct(
                 name = "Shopping List",
                 categoriesList = "Daily"
             ))
