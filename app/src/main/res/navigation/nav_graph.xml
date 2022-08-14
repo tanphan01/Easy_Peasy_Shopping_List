@@ -34,6 +34,10 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_ThirdFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
             app:destination="@id/ThirdFragment" />
     </fragment>
     <fragment
@@ -51,6 +55,10 @@
             app:destination="@id/FirstFragment" />
         <action
             android:id="@+id/action_ThirdFragment_to_FourFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
             app:destination="@id/FourFragment" />
     </fragment>
     <fragment
