@@ -56,8 +56,8 @@ class ThirdFragment : Fragment() {
         databaseListProduct = DbHelper.instance(requireContext()).listProducts()
 
         binding.rvThirdFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, prout ->
-            onItemClick(clickType, prout)
+        binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
+            onItemClick(clickType, produit)
         }
 
         binding.btnCreate.setOnClickListener {
@@ -90,18 +90,18 @@ class ThirdFragment : Fragment() {
 
     }
 
-    private fun onItemClick(clickType: UpdateListAdapter.ClickType, prout: Product) {
+    private fun onItemClick(clickType: UpdateListAdapter.ClickType, produit: Product) {
         when(clickType) {
             UpdateListAdapter.ClickType.MINUS -> {
-                data.remove(prout)
-                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, prout ->
-                    onItemClick(clickType, prout)
+                data.remove(produit)
+                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
+                    onItemClick(clickType, produit)
                 }
             }
             UpdateListAdapter.ClickType.PLUS -> {
-                data.add(prout)
-                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, prout ->
-                    onItemClick(clickType, prout)
+                data.add(produit)
+                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
+                    onItemClick(clickType, produit)
                 }
             }
         }

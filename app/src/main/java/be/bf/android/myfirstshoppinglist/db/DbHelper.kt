@@ -9,7 +9,7 @@ import be.bf.android.myfirstshoppinglist.db.daos.ProductDAO
 import be.bf.android.myfirstshoppinglist.entities.ListProduct
 import be.bf.android.myfirstshoppinglist.entities.Product
 
-@Database(entities = [Product::class, ListProduct::class], version = 5, exportSchema = false)
+@Database(entities = [Product::class, ListProduct::class], version = 1, exportSchema = false)
 abstract class DbHelper : RoomDatabase() {
     abstract fun products(): ProductDAO
     abstract fun listProducts() : ListProductDAO

@@ -35,8 +35,8 @@ class UpdateListAdapter(private val data : MutableList<Product>, private val onI
             holder.btn_minus.visibility = View.VISIBLE
             holder.etName.setText(data[position].name)
             holder.btn_minus.setOnClickListener {
-                val prout = Product(name = holder.etName.text.toString())
-                onItemClick(ClickType.MINUS, prout)
+                val produit = Product(name = holder.etName.text.toString())
+                onItemClick(ClickType.MINUS, produit)
             }
         }
         else {
@@ -45,8 +45,8 @@ class UpdateListAdapter(private val data : MutableList<Product>, private val onI
             holder.etName.hint = "Product's Name"
 
             holder.btn_plus.setOnClickListener {
-                val prout = Product(name = holder.etName.text.toString())
-                onItemClick(ClickType.PLUS, prout)
+                val produit = Product(name = holder.etName.text.toString())
+                onItemClick(ClickType.PLUS, produit)
             }
         }
     }
