@@ -6,8 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import be.bf.android.myfirstshoppinglist.db.daos.ListProductDAO
 import be.bf.android.myfirstshoppinglist.db.daos.ProductDAO
-import be.bf.android.myfirstshoppinglist.entities.ListProduct
-import be.bf.android.myfirstshoppinglist.entities.Product
+import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
+import be.bf.android.myfirstshoppinglist.db.entities.Product
 
 @Database(entities = [Product::class, ListProduct::class], version = 1, exportSchema = false)
 abstract class DbHelper : RoomDatabase() {

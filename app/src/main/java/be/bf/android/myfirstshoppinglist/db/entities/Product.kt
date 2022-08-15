@@ -1,4 +1,4 @@
-package be.bf.android.myfirstshoppinglist.entities
+package be.bf.android.myfirstshoppinglist.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -12,4 +12,4 @@ data class Product constructor(
     val quantity : Int = 1,
     val category : CategoryProductEnum = CategoryProductEnum.PETS,
     var listProductId : Long? = null
-) {}
+)

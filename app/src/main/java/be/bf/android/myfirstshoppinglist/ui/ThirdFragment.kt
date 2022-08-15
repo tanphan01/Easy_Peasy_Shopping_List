@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.bf.android.myfirstshoppinglist.R
@@ -15,11 +14,8 @@ import be.bf.android.myfirstshoppinglist.databinding.FragmentThirdBinding
 import be.bf.android.myfirstshoppinglist.db.DbHelper
 import be.bf.android.myfirstshoppinglist.db.daos.ListProductDAO
 import be.bf.android.myfirstshoppinglist.db.daos.ProductDAO
-import be.bf.android.myfirstshoppinglist.entities.ListProduct
-import be.bf.android.myfirstshoppinglist.entities.Product
-import be.bf.android.myfirstshoppinglist.enums.CategoryProductEnum
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
+import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
+import be.bf.android.myfirstshoppinglist.db.entities.Product
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.

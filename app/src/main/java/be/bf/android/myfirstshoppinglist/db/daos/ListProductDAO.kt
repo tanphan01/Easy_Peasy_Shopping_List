@@ -1,8 +1,9 @@
 package be.bf.android.myfirstshoppinglist.db.daos
 
 import androidx.room.*
-import be.bf.android.myfirstshoppinglist.entities.ListProduct
-import be.bf.android.myfirstshoppinglist.entities.Product
+import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
+import be.bf.android.myfirstshoppinglist.db.entities.Product
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ListProductDAO {
@@ -19,5 +20,9 @@ interface ListProductDAO {
     fun deleteAll()
 
     @Query("SELECT * FROM list_products")
-    fun findAll() : List<ListProduct>
+    fun findAll() : Flow<List<ListProduct>>
+
+    @Query("SELECT * FROM LIST_PRODUCTS WHERE id = :id")
+    fun findOneById(id: Long): Flow<ListProduct>
+
 }

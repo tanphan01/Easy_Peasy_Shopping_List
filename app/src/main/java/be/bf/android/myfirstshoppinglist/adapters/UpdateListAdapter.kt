@@ -1,6 +1,5 @@
 package be.bf.android.myfirstshoppinglist.adapters
 
-import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,8 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 import be.bf.android.myfirstshoppinglist.R
-import be.bf.android.myfirstshoppinglist.entities.Product
-import be.bf.android.myfirstshoppinglist.enums.CategoryProductEnum
+import be.bf.android.myfirstshoppinglist.db.entities.Product
 
 class UpdateListAdapter(private val data : MutableList<Product>, private val onItemClick : (btn: ClickType, produit: Product) -> Unit) : RecyclerView.Adapter<UpdateListAdapter.UpdateListViewHolder>() {
 
