@@ -20,7 +20,7 @@ class ProductViewModel(val dao: ProductDAO): ViewModel() {
         }
     }
 
-    private fun changeBooks(Products: List<Product>) {
+    private fun changeProducts(Products: List<Product>) {
         this.products.value = Products
     }
 }
