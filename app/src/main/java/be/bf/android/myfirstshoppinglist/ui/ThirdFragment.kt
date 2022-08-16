@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.bf.android.myfirstshoppinglist.R
@@ -16,6 +17,8 @@ import be.bf.android.myfirstshoppinglist.db.daos.ListProductDAO
 import be.bf.android.myfirstshoppinglist.db.daos.ProductDAO
 import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
 import be.bf.android.myfirstshoppinglist.db.entities.Product
+import be.bf.android.myfirstshoppinglist.db.viewmodel.ProductViewModel
+import be.bf.android.myfirstshoppinglist.db.viewmodel.ProductViewModelFactory
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -34,6 +37,8 @@ class ThirdFragment : Fragment() {
 
     private lateinit var databaseProduct : ProductDAO
     private lateinit var databaseListProduct: ListProductDAO
+
+    private val viewModel : ProductViewModel by activityViewModels() { ProductViewModelFactory(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -69,10 +74,12 @@ class ThirdFragment : Fragment() {
                 databaseProduct.create(it)
             }
 
-            data.forEach{
-                it.listProductId = idListProduct
-                databaseProduct.deleteAll()
-            }
+            viewModel.changeListSelected(idListProduct)
+
+//            data.forEach{
+//                it.listProductId = idListProduct
+//                databaseProduct.deleteAll()
+//            }
 
             Log.d("List product :", databaseListProduct.findAll().toString())
             Log.d("Products", databaseProduct.findAll().toString())

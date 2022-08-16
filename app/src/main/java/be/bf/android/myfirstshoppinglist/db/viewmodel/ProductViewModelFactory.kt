@@ -7,6 +7,6 @@ import be.bf.android.myfirstshoppinglist.db.DbHelper
 
 class ProductViewModelFactory(val context: Context): ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return ProductViewModel(DbHelper.instance(context).products()) as T
+        return ProductViewModel(DbHelper.instance(context).products(), DbHelper.instance(context).listProducts()) as T
     }
 }

@@ -21,6 +21,9 @@ interface ProductDAO {
     @Query("SELECT * FROM products")
     fun findAll() : Flow<List<Product>>
 
+    @Query("SELECT * FROM products WHERE listProductId = :id")
+    fun findByListProductId(id : Long) : Flow<List<Product>>
+
     @Query("SELECT * FROM products WHERE id = :id")
     fun findOneById(id: Long): Flow<Product>
 
