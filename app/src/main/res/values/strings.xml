@@ -1,34 +1,34 @@
 <resources>
     <string name="app_name">Easy Peasy Shopping List</string>
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_main2" translatable="false">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">Easy Peasy Shopping List</string>
+    <string name="first_fragment_label" translatable="false">Easy Peasy Shopping List</string>
     <string name="second_fragment_label">My Shopping List</string>
 
     <string name="hello_first_fragment">Welcome to a new way to shop !</string>
-    <string name="hello_second_fragment"/>
-    <string name="hello_third_fragment"/>
-    <string name="hello_four_fragment"/>
-    <string name="hello_blank_fragment" />
+    <string name="hello_second_fragment" translatable="false" />
+    <string name="hello_third_fragment" translatable="false" />
+    <string name="hello_four_fragment" translatable="false" />
+    <string name="hello_blank_fragment" translatable="false" />
     <string name="view_shopping_lists">View shopping lists</string>
     <string name="add_a_new_list">Add a new list</string>
-    <string name="desc_fab_add_list">Add new list</string>
+    <string name="desc_fab_add_list" translatable="false">Add new list</string>
     <string name="Cancel">Cancel</string>
     <string name="Create">Create</string>
     <string name="List_editor">List Editor</string>
     <string name="Name">Name: </string>
     <string name="Back">Back</string>
-    <string name="Categories">Categories</string>
+    <string name="Categories" translatable="false">Categories</string>
     <string name="Shopping_List">Shopping List</string>
     <string name="Lbl_editor">List Editor</string>
     <string name="et_product">Product</string>
     <string name="product">Write a product</string>
     <string name="add">Add</string>
-    <string name="logo">Logo</string>
-    <string name="textview">TextView</string>
-    <string name="desc_img_add_list">desc_img_add_list</string>
-    <string name="plus">+</string>
-    <string name="minus">-</string>
+    <string name="logo" translatable="false">Logo</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="desc_img_add_list" translatable="false">desc_img_add_list</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="minus" translatable="false">-</string>
     <string name="Clear">Clear</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

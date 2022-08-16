@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Easy Peasy Shopping List</string>
+    <string name="second_fragment_label">Ma liste de course</string>
+    <string name="hello_first_fragment">Bienvenue dans une nouvelle façon de faire du shopping !</string>
+    <string name="view_shopping_lists">Afficher les listes de courses</string>
+    <string name="add_a_new_list">Ajouter une nouvelle liste</string>
+    <string name="Cancel">Annuler</string>
+    <string name="Create">Créer</string>
+    <string name="List_editor">Editeur de liste</string>
+    <string name="Back">Retour</string>
+    <string name="Name">Nom:</string>
+    <string name="Lbl_editor">Editeur de Liste</string>
+    <string name="et_product">Produit</string>
+    <string name="product">Ecrire un produit</string>
+    <string name="Shopping_List">Liste de course</string>
+    <string name="add">Ajouter</string>
+    <string name="Clear">Effacer</string>
+</resources>

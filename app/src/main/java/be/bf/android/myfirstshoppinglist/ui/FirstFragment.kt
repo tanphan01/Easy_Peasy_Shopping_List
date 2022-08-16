@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import be.bf.android.myfirstshoppinglist.R
 import be.bf.android.myfirstshoppinglist.databinding.FragmentFirstBinding
@@ -36,7 +35,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnViewsShoplist.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_FourFragment)
+            findNavController().navigate(R.id.action_FirstFragment_to_FourthFragment)
         }
 
         binding.fab.setOnClickListener { view: View ->

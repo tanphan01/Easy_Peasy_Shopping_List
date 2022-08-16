@@ -4,12 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import be.bf.android.myfirstshoppinglist.R
 import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
-import be.bf.android.myfirstshoppinglist.db.entities.Product
 
 class ListProductAdapter(private val data : List<ListProduct>, private val onItemClickListener : (id : Long) -> Unit) : RecyclerView.Adapter<ListProductAdapter.ProductViewHolder>() {
 

@@ -19,8 +19,8 @@
             app:popExitAnim="@android:anim/slide_out_right"
             app:destination="@id/SecondFragment" />
         <action
-            android:id="@+id/action_FirstFragment_to_FourFragment"
-            app:destination="@id/FourFragment" />
+            android:id="@+id/action_FirstFragment_to_FourthFragment"
+            app:destination="@id/FourthFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -54,21 +54,21 @@
             android:id="@+id/action_ThirdFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
         <action
-            android:id="@+id/action_ThirdFragment_to_FourFragment"
+            android:id="@+id/action_ThirdFragment_to_FourthFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
-            app:destination="@id/FourFragment" />
+            app:destination="@id/FourthFragment" />
     </fragment>
     <fragment
-        android:id="@+id/FourFragment"
+        android:id="@+id/FourthFragment"
         android:name="be.bf.android.myfirstshoppinglist.ui.FourthFragment"
         android:label="@string/hello_four_fragment"
-        tools:layout="@layout/fragment_four">
+        tools:layout="@layout/fragment_fourth">
 
         <action
-        android:id="@+id/action_FourFragment_to_ThirdFragment"
+        android:id="@+id/action_FourthFragment_to_ThirdFragment"
         app:destination="@id/ThirdFragment" />
     </fragment>
 
