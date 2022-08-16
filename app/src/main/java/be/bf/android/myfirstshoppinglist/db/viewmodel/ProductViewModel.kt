@@ -1,5 +1,6 @@
 package be.bf.android.myfirstshoppinglist.db.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,27 +14,40 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class ProductViewModel(val productDAO: ProductDAO, val listProductDAO: ListProductDAO): ViewModel() {
+
+    private val _allListProduct : MutableLiveData<List<ListProduct>> = MutableLiveData()
+    val allListProduct : LiveData<List<ListProduct>>
+        get() = _allListProduct
+
     private val _products: MutableLiveData<List<Product>> = MutableLiveData()
     val products: LiveData<List<Product>>
         get() = _products
 
-    private val _listProduct : MutableLiveData<ListProduct> = MutableLiveData()
-    val listProduct: LiveData<ListProduct>
+    private val _listProduct : MutableLiveData<ListProduct?> = MutableLiveData()
+    val listProduct: LiveData<ListProduct?>
         get() = _listProduct
 
-    private var _listSelected : MutableLiveData<Long> = MutableLiveData()
-    val listSelected : LiveData<Long>
+    private var _listSelected : MutableLiveData<Long?> = MutableLiveData()
+    val listSelected : LiveData<Long?>
         get() = _listSelected
 
     init {
         val vm = this
+        vm.changeProducts(listOf())
         viewModelScope.launch {
-            productDAO.findAll().collect { vm.changeProducts(it) }
+            listProductDAO.findAll().collect() {
+                Log.d("ListProduct vm", it.toString())
+                vm.changeAllListProduct(it)
+            }
         }
     }
 
     private fun changeProducts(Products: List<Product>) {
         this._products.value = Products
+    }
+
+    private fun changeAllListProduct(allListProduct: List<ListProduct>) {
+        this._allListProduct.value = allListProduct
     }
 
     private fun changeListProduct(listProduct: ListProduct) {
@@ -66,5 +80,11 @@ class ProductViewModel(val productDAO: ProductDAO, val listProductDAO: ListProdu
                 }
             }
         }
+    }
+
+    fun clearData() {
+        _products.value = listOf()
+        _listProduct.value = null
+        _listSelected.value = null
     }
 }

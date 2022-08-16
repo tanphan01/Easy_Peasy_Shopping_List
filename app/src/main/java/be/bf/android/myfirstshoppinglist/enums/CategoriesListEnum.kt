@@ -13,6 +13,4 @@ enum class CategoriesEnum(val src: Int, val txt : String) {
     OILS_SAUCES_CONDIMENTS(R.drawable.cat_condiments, "Oils, Sauces & Condiments"),
     DRINKS(R.drawable.cat_drinks, "Drinks"),
     DAIRY_CHEESE_EGGS(R.drawable.cat_milk, "Dairy, Cheese & Eggs")
-
-
 }

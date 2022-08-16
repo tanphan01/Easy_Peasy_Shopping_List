@@ -19,7 +19,7 @@ interface ListProductDAO {
     @Query("DELETE FROM products")
     fun deleteAll()
 
-    @Query("SELECT * FROM list_products")
+    @Query("SELECT * FROM LIST_PRODUCTS")
     fun findAll() : Flow<List<ListProduct>>
 
     @Query("SELECT * FROM LIST_PRODUCTS WHERE id = :id")

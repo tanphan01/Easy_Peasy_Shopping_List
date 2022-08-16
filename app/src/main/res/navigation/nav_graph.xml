@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/FourFragment"
-        android:name="be.bf.android.myfirstshoppinglist.ui.FourFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.FourthFragment"
         android:label="@string/hello_four_fragment"
         tools:layout="@layout/fragment_four">
 

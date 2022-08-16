@@ -31,9 +31,9 @@ class ThirdFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private lateinit var listProduct : ListProduct
+    private var listProduct : ListProduct? = null
 
-    private val data : MutableList<Product> = mutableListOf()
+    private var data : MutableList<Product> = mutableListOf()
 
     private lateinit var databaseProduct : ProductDAO
     private lateinit var databaseListProduct: ListProductDAO
@@ -53,23 +53,48 @@ class ThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.products.observe(viewLifecycleOwner) {
+            data = it.toMutableList()
+            binding.rvThirdFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
+                onItemClick(clickType, produit)
+            }
+        }
+
+        viewModel.listProduct.observe(viewLifecycleOwner) {
+            Log.d("listProduct", it.toString())
+            if (it != null) {
+                listProduct = it
+                binding.etEditorList.setText(this.listProduct!!.name)
+            }
+        }
+
         databaseProduct = DbHelper.instance(requireContext()).products()
         databaseListProduct = DbHelper.instance(requireContext()).listProducts()
 
-        binding.rvThirdFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
-            onItemClick(clickType, produit)
-        }
 
         binding.btnCreate.setOnClickListener {
 
-            val idListProduct = databaseListProduct.create(
-                ListProduct(
-                name = "Shopping List",
-                categoriesList = "Daily"
-            ))
+            val idListProduct : Long
+
+            if (listProduct != null) {
+                idListProduct = databaseListProduct.create(
+                    ListProduct(
+                        id = this.listProduct!!.id,
+                        name = binding.etEditorList.text.toString(),
+                        categoriesList = "Daily"
+                    ))
+            }
+            else {
+                idListProduct = databaseListProduct.create(
+                    ListProduct(
+                        name = binding.etEditorList.text.toString(),
+                        categoriesList = "Daily"
+                    ))
+            }
 
             data.forEach {
+                Log.d("datax", "onViewCreated: $it")
                 it.listProductId = idListProduct
                 databaseProduct.create(it)
             }

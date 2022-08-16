@@ -10,7 +10,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.bf.android.myfirstshoppinglist.R
+import be.bf.android.myfirstshoppinglist.adapters.ListProductAdapter
 import be.bf.android.myfirstshoppinglist.databinding.FragmentFourBinding
+import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
 import be.bf.android.myfirstshoppinglist.db.viewmodel.ProductViewModel
 import be.bf.android.myfirstshoppinglist.db.viewmodel.ProductViewModelFactory
 import com.google.android.material.snackbar.Snackbar
@@ -18,9 +20,10 @@ import com.google.android.material.snackbar.Snackbar
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class FourFragment : Fragment() {
+class FourthFragment : Fragment() {
 
 
+    private var listOfLists: List<ListProduct> = mutableListOf()
     private var _binding: FragmentFourBinding? = null
 
     // This property is only valid between onCreateView and
@@ -28,6 +31,8 @@ class FourFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel : ProductViewModel by activityViewModels { ProductViewModelFactory(requireContext()) }
+
+    private lateinit var adapter : ListProductAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,16 +47,26 @@ class FourFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        adapter = ListProductAdapter(listOf()) {
+            Log.d("position clicked", it.toString())
+            viewModel.changeListSelected(it)
+            findNavController().navigate(R.id.action_FourFragment_to_ThirdFragment)
+        }
+
+        binding.rvFragmentFour.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.rvFragmentFour.adapter = adapter
+
         viewModel.products.observe(viewLifecycleOwner) {
             if (it != null) {
-                binding.rvFragmentFour.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-
                 Log.d("List de produit : ", it.toString())
             }
         }
 
-        viewModel.listProduct.observe(viewLifecycleOwner) {
+        viewModel.allListProduct.observe(viewLifecycleOwner) {
             if (it != null) {
+                adapter.clear()
+                adapter.addData(it)
+                this.listOfLists = it
                 Log.d("List-produit : ", it.toString())
             }
         }
@@ -60,6 +75,8 @@ class FourFragment : Fragment() {
             Snackbar.make(view, "Add more categories ?", Snackbar.LENGTH_SHORT)
                 .setAction("Cancel", View.OnClickListener {
                 }).show()
+
+            viewModel.clearData()
 
             findNavController().navigate(R.id.action_FourFragment_to_ThirdFragment)
         }
