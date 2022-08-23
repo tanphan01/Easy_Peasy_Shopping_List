@@ -14,7 +14,7 @@ interface ListProductDAO {
     fun updateListProduct(vararg products: Product)
 
     @Delete
-    fun deleteListProduct(vararg products: Product)
+    fun deleteListProduct(vararg products: ListProduct)
 
     @Query("DELETE FROM products")
     fun deleteAll()

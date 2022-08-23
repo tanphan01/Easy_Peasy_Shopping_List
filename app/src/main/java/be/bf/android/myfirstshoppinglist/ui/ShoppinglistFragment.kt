@@ -10,14 +10,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.bf.android.myfirstshoppinglist.R
 import be.bf.android.myfirstshoppinglist.adapters.CategoryAdapter
-import be.bf.android.myfirstshoppinglist.databinding.FragmentSecondBinding
+import be.bf.android.myfirstshoppinglist.databinding.FragmentShoppinglistBinding
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class SecondFragment : Fragment(), View.OnClickListener {
+class ShoppinglistFragment : Fragment(), View.OnClickListener {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: FragmentShoppinglistBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -28,7 +28,7 @@ class SecondFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FragmentShoppinglistBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -36,10 +36,10 @@ class SecondFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.rvSecondFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        binding.rvSecondFragment.layoutManager = GridLayoutManager(context, 2)
-        binding.rvSecondFragment.adapter = CategoryAdapter() {
-            findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
+        binding.rvShoppinglistFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.rvShoppinglistFragment.layoutManager = GridLayoutManager(context, 2)
+        binding.rvShoppinglistFragment.adapter = CategoryAdapter() {
+            findNavController().navigate(R.id.action_ShoppinglistFragment_to_ThirdFragment)
         }
 
     }
@@ -50,7 +50,7 @@ class SecondFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment,)
+        findNavController().navigate(R.id.action_ShoppinglistFragment_to_ThirdFragment,)
     }
 
 }

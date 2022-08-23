@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="be.bf.android.myfirstshoppinglist.ui.FirstFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.HomeFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_home">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -24,9 +24,9 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="be.bf.android.myfirstshoppinglist.ui.SecondFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.ShoppinglistFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_shoppinglist">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
@@ -42,9 +42,9 @@
     </fragment>
     <fragment
         android:id="@+id/ThirdFragment"
-        android:name="be.bf.android.myfirstshoppinglist.ui.ThirdFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.ShoppingdetailFragment"
         android:label="@string/hello_third_fragment"
-        tools:layout="@layout/fragment_third">
+        tools:layout="@layout/fragment_shoppingdetail">
 
         <action
             android:id="@+id/action_ThirdFragment_to_SecondFragment"
@@ -60,18 +60,25 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
             app:destination="@id/FourthFragment" />
+        <action
+            android:id="@+id/action_ThirdFragment_to_SecondFragment2"
+            app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/FourthFragment"
-        android:name="be.bf.android.myfirstshoppinglist.ui.FourthFragment"
+        android:name="be.bf.android.myfirstshoppinglist.ui.EditorlistFragment"
         android:label="@string/hello_four_fragment"
-        tools:layout="@layout/fragment_fourth">
+        tools:layout="@layout/fragment_editorlist">
 
         <action
         android:id="@+id/action_FourthFragment_to_ThirdFragment"
         app:destination="@id/ThirdFragment" />
     </fragment>
-
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="be.bf.android.myfirstshoppinglist.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 
 
 </navigation>

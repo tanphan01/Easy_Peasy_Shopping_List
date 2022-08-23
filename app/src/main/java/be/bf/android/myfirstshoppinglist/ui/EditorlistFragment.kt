@@ -11,20 +11,20 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.bf.android.myfirstshoppinglist.R
 import be.bf.android.myfirstshoppinglist.adapters.ListProductAdapter
-import be.bf.android.myfirstshoppinglist.databinding.FragmentFourthBinding
+import be.bf.android.myfirstshoppinglist.databinding.FragmentEditorlistBinding
 import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
-import be.bf.android.myfirstshoppinglist.db.viewmodel.ProductViewModel
-import be.bf.android.myfirstshoppinglist.db.viewmodel.ProductViewModelFactory
+import be.bf.android.myfirstshoppinglist.viewmodel.ProductViewModel
+import be.bf.android.myfirstshoppinglist.viewmodel.ProductViewModelFactory
 import com.google.android.material.snackbar.Snackbar
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class FourthFragment : Fragment() {
+class EditorlistFragment : Fragment() {
 
 
     private var listOfLists: List<ListProduct> = mutableListOf()
-    private var _binding: FragmentFourthBinding? = null
+    private var _binding: FragmentEditorlistBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -39,7 +39,7 @@ class FourthFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFourthBinding.inflate(inflater, container, false)
+        _binding = FragmentEditorlistBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -50,11 +50,11 @@ class FourthFragment : Fragment() {
         adapter = ListProductAdapter(listOf()) {
             Log.d("position clicked", it.toString())
             viewModel.changeListSelected(it)
-            findNavController().navigate(R.id.action_FourthFragment_to_ThirdFragment)
+            findNavController().navigate(R.id.action_EditorlistFragment_to_ShoppingdetailFragment)
         }
 
-        binding.rvFragmentFourth.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        binding.rvFragmentFourth.adapter = adapter
+        binding.rvFragmentEditorlist.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.rvFragmentEditorlist.adapter = adapter
 
         viewModel.products.observe(viewLifecycleOwner) {
             if (it != null) {
@@ -63,6 +63,7 @@ class FourthFragment : Fragment() {
         }
 
         viewModel.allListProduct.observe(viewLifecycleOwner) {
+            Log.d("EditorlistFragment", "onViewCreated: "+ it)
             if (it != null) {
                 adapter.clear()
                 adapter.addData(it)
@@ -78,7 +79,7 @@ class FourthFragment : Fragment() {
 
             viewModel.clearData()
 
-            findNavController().navigate(R.id.action_FourthFragment_to_ThirdFragment)
+            findNavController().navigate(R.id.action_EditorlistFragment_to_ShoppingdetailFragment)
         }
 
     }

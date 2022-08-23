@@ -26,7 +26,7 @@ class ListProductAdapter(private val data : List<ListProduct>, private val onIte
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        holder.tvShowItem.text = "${_data[position].id} : ${_data[position].name}"
+        holder.tvShowItem.text = _data[position].name
         holder.btnUpdate.setOnClickListener {
             _data[position].id?.let {
                     onItemClickListener(it)

@@ -15,9 +15,6 @@ interface ProductDAO {
     @Delete
     fun deleteProducts(vararg products: Product)
 
-    @Query("DELETE FROM products")
-    fun deleteAll()
-
     @Query("SELECT * FROM products")
     fun findAll() : Flow<List<Product>>
 

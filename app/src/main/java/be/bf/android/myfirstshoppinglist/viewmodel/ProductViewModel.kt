@@ -1,16 +1,14 @@
-package be.bf.android.myfirstshoppinglist.db.viewmodel
+package be.bf.android.myfirstshoppinglist.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import be.bf.android.myfirstshoppinglist.db.RoomScope
 import be.bf.android.myfirstshoppinglist.db.daos.ListProductDAO
 import be.bf.android.myfirstshoppinglist.db.daos.ProductDAO
 import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
 import be.bf.android.myfirstshoppinglist.db.entities.Product
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class ProductViewModel(val productDAO: ProductDAO, val listProductDAO: ListProductDAO): ViewModel() {
@@ -86,5 +84,12 @@ class ProductViewModel(val productDAO: ProductDAO, val listProductDAO: ListProdu
         _products.value = listOf()
         _listProduct.value = null
         _listSelected.value = null
+    }
+
+    fun delete(listProduct: ListProduct?) {
+        Log.d("ProductViewModel", "delete: "+ listProduct)
+        if (listProduct != null) {
+            listProductDAO.deleteListProduct(listProduct)
+        }
     }
 }

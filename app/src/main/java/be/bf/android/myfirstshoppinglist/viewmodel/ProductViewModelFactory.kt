@@ -1,4 +1,4 @@
-package be.bf.android.myfirstshoppinglist.db.viewmodel
+package be.bf.android.myfirstshoppinglist.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.ViewModel

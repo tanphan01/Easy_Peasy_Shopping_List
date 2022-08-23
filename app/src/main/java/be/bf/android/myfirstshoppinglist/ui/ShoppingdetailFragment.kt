@@ -11,21 +11,21 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.bf.android.myfirstshoppinglist.R
 import be.bf.android.myfirstshoppinglist.adapters.UpdateListAdapter
-import be.bf.android.myfirstshoppinglist.databinding.FragmentThirdBinding
+import be.bf.android.myfirstshoppinglist.databinding.FragmentShoppingdetailBinding
 import be.bf.android.myfirstshoppinglist.db.DbHelper
 import be.bf.android.myfirstshoppinglist.db.daos.ListProductDAO
 import be.bf.android.myfirstshoppinglist.db.daos.ProductDAO
 import be.bf.android.myfirstshoppinglist.db.entities.ListProduct
 import be.bf.android.myfirstshoppinglist.db.entities.Product
-import be.bf.android.myfirstshoppinglist.db.viewmodel.ProductViewModel
-import be.bf.android.myfirstshoppinglist.db.viewmodel.ProductViewModelFactory
+import be.bf.android.myfirstshoppinglist.viewmodel.ProductViewModel
+import be.bf.android.myfirstshoppinglist.viewmodel.ProductViewModelFactory
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class ThirdFragment : Fragment() {
+class ShoppingdetailFragment : Fragment() {
 
-    private var _binding: FragmentThirdBinding? = null
+    private var _binding: FragmentShoppingdetailBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -45,7 +45,7 @@ class ThirdFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentThirdBinding.inflate(inflater, container, false)
+        _binding = FragmentShoppingdetailBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -55,8 +55,8 @@ class ThirdFragment : Fragment() {
 
         viewModel.products.observe(viewLifecycleOwner) {
             data = it.toMutableList()
-            binding.rvThirdFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
+            binding.rvShoppingdetailFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            binding.rvShoppingdetailFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
                 onItemClick(clickType, produit)
             }
         }
@@ -109,11 +109,16 @@ class ThirdFragment : Fragment() {
             Log.d("List product :", databaseListProduct.findAll().toString())
             Log.d("Products", databaseProduct.findAll().toString())
 
-            findNavController().navigate(R.id.action_ThirdFragment_to_FourthFragment)
+            findNavController().navigate(R.id.action_ShoppingdetailFragment_to_FourthFragment)
         }
 
         binding.btnBack.setOnClickListener {
-            findNavController().navigate(R.id.action_ThirdFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_ShoppingdetailFragment_to_ShoppinglistFragment)
+        }
+
+        binding.btnDelete.setOnClickListener {
+            viewModel.delete(listProduct)
+            findNavController().navigate(R.id.action_ShoppingdetailFragment_to_ShoppinglistFragment)
         }
 
     }
@@ -122,13 +127,13 @@ class ThirdFragment : Fragment() {
         when(clickType) {
             UpdateListAdapter.ClickType.MINUS -> {
                 data.remove(produit)
-                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
+                binding.rvShoppingdetailFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
                     onItemClick(clickType, produit)
                 }
             }
             UpdateListAdapter.ClickType.PLUS -> {
                 data.add(produit)
-                binding.rvThirdFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
+                binding.rvShoppingdetailFragment.adapter = UpdateListAdapter(data) { clickType, produit ->
                     onItemClick(clickType, produit)
                 }
             }
