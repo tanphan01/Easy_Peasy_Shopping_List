@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_EditorlistFragment_to_ShoppingdetailFragment" type="id" />
+    <item name="action_HomeFragment_to_EditorlistFragment" type="id" />
+    <item name="action_HomeFragment_to_ShoppinglistFragment" type="id" />
+    <item name="action_ShoppinglistFragment_to_ShoppingdetailFragment" type="id" />
+    <item name="action_ShoppingdetailFragment_to_EditorlistFragment" type="id" />
+    <item name="action_ShoppingdetailFragment_to_ShoppinglistFragment" type="id" />
+    <item name="ShoppinglistFragment" type="id" />
+</resources>

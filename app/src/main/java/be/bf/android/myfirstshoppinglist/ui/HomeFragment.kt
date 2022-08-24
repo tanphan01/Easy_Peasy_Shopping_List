@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnViewsShoplist.setOnClickListener {
+        binding.btnViewsShoplist.setOnClickListener { view: View ->
             findNavController().navigate(R.id.action_HomeFragment_to_EditorlistFragment)
         }
 

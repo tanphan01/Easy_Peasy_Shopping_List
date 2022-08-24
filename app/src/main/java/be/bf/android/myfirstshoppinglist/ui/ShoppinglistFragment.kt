@@ -39,7 +39,7 @@ class ShoppinglistFragment : Fragment(), View.OnClickListener {
         binding.rvShoppinglistFragment.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.rvShoppinglistFragment.layoutManager = GridLayoutManager(context, 2)
         binding.rvShoppinglistFragment.adapter = CategoryAdapter() {
-            findNavController().navigate(R.id.action_ShoppinglistFragment_to_ThirdFragment)
+            findNavController().navigate(R.id.action_ShoppinglistFragment_to_ShoppingdetailFragment)
         }
 
     }
@@ -50,7 +50,7 @@ class ShoppinglistFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        findNavController().navigate(R.id.action_ShoppinglistFragment_to_ThirdFragment,)
+        findNavController().navigate(R.id.action_ShoppinglistFragment_to_ShoppingdetailFragment,)
     }
 
 }

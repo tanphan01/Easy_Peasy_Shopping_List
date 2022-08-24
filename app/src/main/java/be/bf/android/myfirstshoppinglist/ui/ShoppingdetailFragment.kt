@@ -109,7 +109,7 @@ class ShoppingdetailFragment : Fragment() {
             Log.d("List product :", databaseListProduct.findAll().toString())
             Log.d("Products", databaseProduct.findAll().toString())
 
-            findNavController().navigate(R.id.action_ShoppingdetailFragment_to_FourthFragment)
+            findNavController().navigate(R.id.action_ShoppingdetailFragment_to_EditorlistFragment)
         }
 
         binding.btnBack.setOnClickListener {
