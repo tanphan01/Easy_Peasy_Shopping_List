@@ -116,7 +116,7 @@ class ShoppingdetailFragment : Fragment() {
             findNavController().navigate(R.id.action_ShoppingdetailFragment_to_ShoppinglistFragment)
         }
 
-        binding.btnDelete.setOnClickListener {
+        binding.btnClearAll.setOnClickListener {
             viewModel.delete(listProduct)
             findNavController().navigate(R.id.action_ShoppingdetailFragment_to_ShoppinglistFragment)
         }
